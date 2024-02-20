@@ -1,0 +1,16 @@
+{
+  "spells": [
+    {
+      "id": "1",
+      "title": "Some Spell",
+      "description": "Description",
+      "classes": ["class1"]
+    },
+    {
+      "id": "2",
+      "title": "Some Spell 2",
+      "description": "Description 2",
+      "classes": ["class1", "class2"]
+    }
+  ]
+}
