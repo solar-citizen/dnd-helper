@@ -106,8 +106,8 @@ form button {
     py-3 px-4 my-4 
     relative 
     overflow-hidden;
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 150px;
+  max-height: 150px;
 }
 .card h3 {
   @apply font-bold text-gray-700 text-sm 
