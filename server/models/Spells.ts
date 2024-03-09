@@ -12,7 +12,7 @@ const getAllSpells = async (): Promise<ISpell[]> => {
         NAME, BASE_RANK DESC
     `,
   )
-  return res.rows as ISpell[]
+  return res.rows
 }
 
 const Spells = { getAllSpells }
