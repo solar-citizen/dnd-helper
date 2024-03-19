@@ -27,6 +27,19 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 2. Start Postgress db
 
 docker-compose up -d
+
+### Client
+
+1. npm i
+
+2. npm run dev
+
+### Server
+
+1. cd server -> npm i
+
+2. npm run dev
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

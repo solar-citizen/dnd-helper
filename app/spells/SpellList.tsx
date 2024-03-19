@@ -1,14 +1,25 @@
-import { FC } from 'react'
+'use client'
+import { FC, useState, useEffect } from 'react'
+import { getAllSpells } from '../requests/spellsRequests'
+import { ISpell } from '@/interfaces/ISpell'
 
-const getSpells = async () => (await fetch('http://localhost:4000/spells')).json()
+const SpellList: FC = () => {
+  const [spells, setSpells] = useState<ISpell[]>([])
 
-const SpellList: FC = async () => {
-  const spells = await getSpells()
+  useEffect(() => {
+    const fetchSpells = async () => {
+      const spells = await getAllSpells()
+      setSpells(spells)
+    }
+    fetchSpells()
+  }, [])
+
   return (
     <div className='cards'>
-      {spells.map(({ id, title, description }) => (
+      {spells.map(({ id, name, baseRank, description }) => (
         <div key={id} className='card'>
-          <h3>{title}</h3>
+          <h3>{name}</h3>
+          <h4>Base rank: {baseRank}</h4>
           <p>{description.slice(0, 200)}...</p>
         </div>
       ))}
