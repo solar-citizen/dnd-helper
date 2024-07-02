@@ -16,7 +16,7 @@ const SpellList: FC = () => {
 
   return (
     <div className='cards'>
-      {spells.map(({ id, name, baseRank, description }) => (
+      {spells?.map(({ id, name, baseRank, description }) => (
         <div key={id} className='card'>
           <h3>{name}</h3>
           <h4>Base rank: {baseRank}</h4>
